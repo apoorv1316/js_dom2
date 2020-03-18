@@ -5,6 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body></body>
+  <body>
+    <div class='container'>
+      <h1>Sign Up</h1>
+      <section class='main'>
+        <label class='full-name'>Full Name</label>
+        <input class='full-name-field' type='text'>
+        <label class='email'>Email</label>
+        <input class='email-field' type='text'>
+        <label class='password'>Password</label>
+        <input class='password-field' type='password'>
+        <button class='submit-btn'>Submit</button>
+      </section>
+      
+    </div>
+    <script>
+      let nameField = document.body.querySelector('.full-name-field');
+      let emailField = document.body.querySelector('.email-field');
+      let passwordField = document.body.querySelector('.password-field');
+      let mainSec = document.body.querySelector('.main');
+      let subBtn = document.body.querySelector('.submit-btn');
+      subBtn.addEventListener('click', updateUI);
+      
+      function updateUI(event) {
+        let name = nameField.value.trim();
+        let email = emailField.value.trim();
+        let pass = passwordField.value.trim();
+        if(name.length  == 0) { 
+          alert("Name can't be empty!")
+          return;
+        }
+        if(email.length  == 0) { 
+          alert("Email can't be empty!")
+          return;
+        }
+        if(pass.length  < 6) { 
+          alert("password must be longer than 6!")
+          return;
+        }
+        let str = (`<p class='res-text'>You are ${name}\n Your email: 
+        ${email} and password is ${pass} </p>`)
+        mainSec.innerHTML = str;
+        mainSec.style.display = 'block';
+      }
+      
+    </script>
+  </body>
 </html>

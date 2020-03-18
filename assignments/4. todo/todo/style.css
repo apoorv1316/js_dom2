@@ -1,0 +1,32 @@
+
+body {
+    font-family: sans-serif;
+}
+input {
+    padding: .5rem 1rem;
+    border: 1px solid teal;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 440px;
+    margin: 0 auto;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul.list {
+    list-style: none;
+}
+ul.list li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer> button {
+    border: 1px solid teal;
+    margin-right: 0.5rem;
+}

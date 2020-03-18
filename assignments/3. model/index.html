@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Model</title>
+    <link rel="stylesheet"  href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Spartan:300,400,600,700&display=swap" rel="stylesheet"> 
+  
+  </head>
+  <body>
+    <div class='container'>
+        <h1>Gallery with Modal Window</h1>
+        <section class='main'>
+        </section>
+        <section class='modal-window'>
+            <img class='model-img'>
+            <p class='model-name'></p>
+            <p class='model-category'></p>
+            <p class='close'>x</p>
+        </section>
+    </div>
+    </body>
+    <script>
+    let visited = false;
+    let data = [
+        {
+            image:
+            "http://data.mavo.io/portfolio/images/pasted-image-1494464667397.png",
+            name: "Carwash",
+            category: "Painting"
+        },
+        {
+            image:
+            "http://data.mavo.io/portfolio/images/pasted-image-1494528264937.png",
+            name: "Muck Mouth",
+            category: "Painting"
+        },
+        {
+            image:
+            "http://data.mavo.io/portfolio/images/pasted-image-1494528646446.png",
+            name: "Fishwall",
+            category: "Painting"
+        },
+        {
+            image: "http://data.mavo.io/portfolio/images/web-coffe-marilyn.jpg",
+            name: "Web Coffe Marilyn",
+            category: "Painting"
+        },
+        {
+            image:
+            "http://data.mavo.io/portfolio/images/pasted-image-1494903924970.png",
+            name: "Web 3 Jules",
+            category: "Painting"
+        },
+        {
+            image: "http://data.mavo.io/portfolio/images/web-electric3.jpg",
+            name: "Web electric3",
+            category: "Painting"
+        }
+    ];
+    // <div>
+    //     <image>
+    // </div>
+    let mainSec = document.body.querySelector('.main');
+    let modalWindow = document.body.querySelector('.modal-window');
+    function createInitUI() {
+        
+        let str = '';
+        data.forEach(elem =>{
+            str += `<div><img src=${elem['image']} alt=${elem['name']} title= ${elem['name']}></div>`;
+        });
+        mainSec.innerHTML = str;
+    }
+    createInitUI();
+    let imgArr = document.body.querySelectorAll('.main img');
+    let modelImg = document.body.querySelector('.model-img');
+    let modelName = document.body.querySelector('.model-name')
+    let modelCat = document.body.querySelector('.model-category');
+    console.log(imgArr.length);
+    imgArr.forEach((elem,index) => {
+        elem.addEventListener('click', function(e){
+            let str = '';
+            modelImg.setAttribute('src', data[index]['image']);
+            modelImg.setAttribute('data-name', data[index]['name']);
+            modelImg.setAttribute('data-category', data[index]['category']);
+            modelName.innerHTML = modelImg.dataset.name;
+            modelCat.innerHTML = modelImg.dataset.category;
+            console.log(str);
+            modalWindow.style.display = 'block';
+            visited = true;
+        });
+        
+    });
+    
+    let cross = document.body.querySelector('.close');
+    cross.addEventListener('click', functionClose);
+    function functionClose(event) {
+        modalWindow.style.display = 'none';
+        console.log('HEllo');
+    }
+    modalWindow.addEventListener('keyup', functionEsc);
+    function functionEsc(event){
+        if(event.keyCode == 27)
+            modalWindow.style.display = 'none';
+        console.log('HEllo');    
+    }
+    
+    
+    </script>
+</html>
