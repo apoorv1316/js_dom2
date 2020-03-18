@@ -5,7 +5,6 @@ let hideBtn = document.body.querySelector('#add-book input[type=checkbox]');
 let ulElem = document.body.querySelector('ul');
 let nameField = document.body.querySelector('#add-book > input:nth-child(3)');
 let searchField = document.body.querySelector('#search-books > input:first-child');
-//searchField.addEventListener('keydown', searchBook);
 let uId = 1;
 function updateUI(arr){
     ulElem.innerHTML = '';

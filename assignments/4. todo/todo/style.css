@@ -1,40 +1,32 @@
-h1{
-    text-align: center;
-    font-size: 100px;
-    color: rgba(175, 47, 47, 0.15);
-    font-weight: 100;
 
+body {
+    font-family: sans-serif;
 }
-body{
-    font: 300 14px / 1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+input {
+    padding: .5rem 1rem;
+    border: 1px solid teal;
 }
-.todo{
-    padding: 16px 16px 16px 60px;
-    background: rgba(0, 0, 0, 0.003);
-    /* box-shadow: rgba(0, 0, 0, 0.03) 0px -2px 1px inset; */
-    border-color: initial;
-    box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
-    border: none;
-    border-image: initial;
-    border-width: initial;
-    width: 100%;
-    font-size: 24px;
-    line-height: 1.4em;
-    box-sizing: border-box;
-    color: inherit;
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 440px;
+    margin: 0 auto;
 }
-.round{
-    width: 1.3em;
-    height: 1.3em;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    outline: none;
-    text-align: center;
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-button{
-    margin-left: 32px;
+ul.list {
+    list-style: none;
+}
+ul.list li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer> button {
+    border: 1px solid teal;
+    margin-right: 0.5rem;
 }

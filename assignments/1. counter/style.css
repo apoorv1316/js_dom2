@@ -47,9 +47,9 @@ table {
 h1{
     margin-top: 5rem;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 500;
-    color: rgb(231, 200, 200);
+    color: rgb(0, 0, 0);
     font-family: 'Spartan', sans-serif;
 }
 
@@ -65,7 +65,7 @@ html {
 	}
 }
 .container{
-    width: 400px;
+    width: 600px;
     margin: 0 auto;
 }
 .main{
@@ -81,8 +81,8 @@ html {
                          'i i . . . . . d d'
                          'i i . r r r . d d'
                          '. . . r r r . . .';
-    border: 2px ridge #ddd;
-    box-shadow: inset 2px 2px 32px -3px rgba(182, 177, 177, 0.75);
+    border: 2px solid black;
+
 
 }    
 .inc-btn{
@@ -91,10 +91,10 @@ html {
     grid-area: i;
     font-size: 4rem;
     cursor: pointer;
-    color: rgb(163, 224, 163);
+    color: rgb(64, 212, 64);
     background-color: #ddd;
     border-radius: 8px;
-    box-shadow: inset 2px 2px 32px -3px rgba(182, 177, 177, 0.75);
+
 }
 .dec-btn{
     text-align: center;
@@ -102,11 +102,10 @@ html {
     grid-area: d;
     font-size: 4rem;
     cursor: pointer;
-    color: rgb(224, 163, 163);
+    color: rgb(219, 19, 19);
     background-color: #ddd;
-    border-radius: 8px;
-    transform: rotate(180deg);
-    box-shadow: inset 2px 2px 32px -3px rgba(182, 177, 177, 0.75);
+     border-radius: 8px;
+  
 }
 .res-btn{
     text-align: center;
@@ -114,19 +113,19 @@ html {
     grid-area: r;
     font-size: 4rem;
     cursor: pointer;
-    background-color: #ddd;
+    background-color: rgb(87, 68, 68);
     color: #fff;
     border-radius: 8px;
-    box-shadow: inset 2px 2px 32px -3px rgba(182, 177, 177, 0.75);
+    
 }
 .num{
     text-align: center;
     align-self: center;
     grid-area: n;
     font-size: 2.5rem;
-    background-color: #ddd;
+    background-color: rgb(124, 107, 107);
     border-radius: 8px;
     font-weight: 600;
     padding: 1.2rem 1rem 1rem 1rem;
-    box-shadow: inset 2px 2px 32px -3px rgba(182, 177, 177, 0.75);
+  
 }
